@@ -1,0 +1,41 @@
+module.exports = {
+  root: true,
+  extends: [
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+  ],
+  plugins: ['react-hooks', '@typescript-eslint', 'eslint-plugin-testing-library', 'eslint-plugin-jest-dom'],
+  globals: {
+    describe: 'readonly',
+    it: 'readonly',
+    fit: 'readonly',
+    test: 'readonly',
+    expect: 'readonly',
+    afterEach: 'readonly',
+    beforeEach: 'readonly',
+    afterAll: 'readonly',
+    beforeAll: 'readonly',
+    fdescribe: 'readonly',
+  },
+  rules: {
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    'react/prop-types': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
+    '@typescript-eslint/indent': ['off'],
+    '@typescript-eslint/prefer-interface': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/camelcase': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+  },
+  parser: '@typescript-eslint/parser',
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+  ignorePatterns: ['dist/*', 'node_modules'],
+};

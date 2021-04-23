@@ -1,0 +1,14 @@
+/* ./src/styles/global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper,
+.tl-edges,
+.tl-wrapper {
+  height: 100%;
+  min-height: 100%;
+}

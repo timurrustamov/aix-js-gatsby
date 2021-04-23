@@ -1,35 +1,43 @@
 module.exports = {
   siteMetadata: {
-    title: "gatsby-presentation",
+    title: 'gatsby-presentation',
+    siteUrl: 'http://localhost:3000',
   },
   plugins: [
-    "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    'gatsby-plugin-image',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: "src/images/icon.png",
+        icon: 'src/images/icon.png',
       },
     },
-    "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        name: "images",
-        path: "./src/images/",
+        rehypePlugins: [require('rehype-highlight')],
       },
-      __key: "images",
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-transition-link',
+    'gatsby-plugin-postcss',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: './src/images/',
+      },
+      __key: 'images',
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: 'pages',
+        path: './src/pages/',
       },
-      __key: "pages",
+      __key: 'pages',
     },
   ],
 };
