@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  @apply text-4xl text-purple-700 my-4;
+}
+
+h1 a,
+a:visited {
+  @apply text-purple-700 my-4;
+}
+
+a {
+  @apply inline-block px-1;
+}
+
+h2 {
+  @apply text-2xl text-purple-700 my-4;
+}
+
+ul {
+  @apply my-2 mb-4;
+}
+
+p {
+  @apply my-8;
+}

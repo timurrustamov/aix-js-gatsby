@@ -5,6 +5,7 @@ import tw from 'tailwind-styled-components';
 
 import SlideMain from '../components/SlideMain';
 import { motion } from 'framer-motion';
+import Seo from '../components/Seo';
 
 const Container = tw.div`
   w-full
@@ -26,36 +27,44 @@ const Highlight = tw.span`
 
 const Index: FunctionComponent = () => {
   return (
-    <SlideMain next="/intro">
-      <Container>
-        <Title>
-          <Highlight>Gatsby</Highlight>JS
-        </Title>
+    <>
+      <Seo
+        title="[AixJS] GatsbyJS and Gatsby cloud - the fastest frontend for the modern web"
+        description="This is the first slide of AixJS presentation by Timur Rustamov"
+      />
 
-        <motion.div
-          drag
-          dragConstraints={{ top: -50, right: 50, bottom: 50, left: -50 }}
-          dragElastic={0.2}
-          transition={{ type: 'spring' }}
-        >
-          <StaticImage
-            className="w-48 lg:w-96 filter drop-shadow-2xl my-6"
-            alt="Gatsby"
-            src="../images/icon.png"
-            placeholder="blurred"
-            layout="constrained"
-          />
-        </motion.div>
-
-        <div className="my-8">
+      <SlideMain next="/presentation">
+        <Container>
           <Title>
-            The fastest frontend ✨
-            <br />
-            <Highlight>for the modern web</Highlight>
+            <Highlight>Gatsby</Highlight>JS
           </Title>
-        </div>
-      </Container>
-    </SlideMain>
+
+          <motion.div
+            drag
+            dragConstraints={{ top: -50, right: 50, bottom: 50, left: -50 }}
+            dragElastic={0.2}
+            transition={{ type: 'spring' }}
+          >
+            <StaticImage
+              draggable={false}
+              className="w-48 lg:w-64 filter drop-shadow-2xl my-6"
+              alt="Gatsby"
+              src="../images/icon.png"
+              placeholder="blurred"
+              layout="constrained"
+            />
+          </motion.div>
+
+          <div className="my-8">
+            <Title className="text-4xl lg:text-6xl ">
+              The fastest frontend ✨
+              <br />
+              <Highlight>for the modern web</Highlight>
+            </Title>
+          </div>
+        </Container>
+      </SlideMain>
+    </>
   );
 };
 

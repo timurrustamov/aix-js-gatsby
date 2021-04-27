@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: 'gatsby-presentation',
@@ -16,6 +20,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
+        defaultLayouts: {
+          default: require.resolve('./src/components/MdxLayout.tsx'),
+        },
         rehypePlugins: [require('rehype-highlight')],
       },
     },
