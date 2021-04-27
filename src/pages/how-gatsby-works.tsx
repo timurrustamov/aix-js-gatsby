@@ -24,6 +24,7 @@ const HowGatsbyWorks: FunctionComponent = () => {
           src="../images/how-gatsby-works.png"
           placeholder="blurred"
           layout="constrained"
+          quality={100}
         />
       </SlideMain>
     </>
