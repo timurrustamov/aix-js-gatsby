@@ -1,29 +1,11 @@
 import React, { FunctionComponent } from 'react';
 
 import { StaticImage } from 'gatsby-plugin-image';
-import tw from 'tailwind-styled-components';
+import { motion } from 'framer-motion';
 
 import SlideMain from '../components/SlideMain';
-import { motion } from 'framer-motion';
 import Seo from '../components/Seo';
-
-const Container = tw.div`
-  w-full
-  flex-1
-  flex flex-col justify-center items-center
-  p-2
-`;
-
-const Title = tw.h1`
-  font-semibold
-  text-6xl lg:text-8xl text-center
-  filter drop-shadow
-  my-8
-`;
-
-const Highlight = tw.span`
-  text-purple-800 text-opacity-80
-`;
+import GradientText from '../components/GradientText';
 
 const Index: FunctionComponent = () => {
   return (
@@ -34,10 +16,10 @@ const Index: FunctionComponent = () => {
       />
 
       <SlideMain next="/presentation">
-        <Container>
-          <Title>
-            <Highlight>Gatsby</Highlight>JS
-          </Title>
+        <div className="w-full flex-1 flex flex-col justify-center items-center p-2">
+          <h1 className="font-semibold text-5xl lg:text-7xl text-center text-gray-800 filter drop-shadow my-8">
+            GatsbyJS
+          </h1>
 
           <motion.div
             drag
@@ -55,14 +37,14 @@ const Index: FunctionComponent = () => {
             />
           </motion.div>
 
-          <div className="my-8">
-            <Title className="text-4xl lg:text-6xl ">
-              The fastest frontend ✨
+          <GradientText className="my-8 filter drop-shadow-lg">
+            <h2 className="text-5xl lg:text-7xl font-semibold text-center">
+              The fastest frontend <span className="text-black">✨</span>
               <br />
-              <Highlight>for the modern web</Highlight>
-            </Title>
-          </div>
-        </Container>
+              for the modern web
+            </h2>
+          </GradientText>
+        </div>
       </SlideMain>
     </>
   );

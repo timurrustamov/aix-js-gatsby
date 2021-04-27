@@ -5,6 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import SlideMain from '../components/SlideMain';
 import { motion } from 'framer-motion';
 import Seo from '../components/Seo';
+import GradientText from '../components/GradientText';
 
 const GatsbyPluginImage: FunctionComponent = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -17,9 +18,9 @@ const GatsbyPluginImage: FunctionComponent = () => {
       />
 
       <SlideMain previous="/gatsby-node-demo" next="/gatsby-schema-extension-demo">
-        <h1 className="text-6xl text-center font-bold my-12">
-          <span className="text-purple-800">gatsby-plugin-image</span>
-        </h1>
+        <GradientText className="text-center my-12">
+          <h1 className="text-6xl font-bold my-2">gatsby-plugin-image</h1>
+        </GradientText>
 
         <div
           ref={ref}

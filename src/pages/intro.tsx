@@ -5,6 +5,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import SlideMain from '../components/SlideMain';
 import { motion, Variant } from 'framer-motion';
 import Seo from '../components/Seo';
+import GradientText from '../components/GradientText';
 
 const hidden: Variant = {
   translateX: '0%',
@@ -63,10 +64,13 @@ const Intro: FunctionComponent = () => {
       />
 
       <SlideMain previous="/presentation" next="/ssg">
-        <h1 className="text-6xl font-semibold text-center my-8">
-          A blazing fast ⚡️
-          <p className="text-purple-800">Static Site Generator</p>
-        </h1>
+        <GradientText className="my-8 filter drop-shadow-lg">
+          <h1 className="text-6xl font-semibold text-center my-2">
+            A blazing fast <span className="text-black">⚡️</span>
+            <br />
+            Static Site Generator
+          </h1>
+        </GradientText>
 
         <motion.div
           className="cursor-pointer relative h-64 w-64 lg:w-96 lg:h-96 my-8"

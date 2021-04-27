@@ -5,6 +5,7 @@ import { motion, useAnimation } from 'framer-motion';
 
 import SlideMain from '../components/SlideMain';
 import Seo from '../components/Seo';
+import GradientText from '../components/GradientText';
 
 const pluginNames = [
   'gatsby-plugin-image',
@@ -47,7 +48,7 @@ const GatsbyPlugins: FunctionComponent = () => {
         {pluginNames.map((pluginName, index) => {
           return (
             <motion.p
-              className="text-4xl text-center font-bold my-2"
+              className="text-4xl text-center font-bold my-2 filter drop-shadow-md"
               key={pluginName}
               custom={index}
               animate={controls}
@@ -75,9 +76,11 @@ const GatsbyPlugins: FunctionComponent = () => {
       />
 
       <SlideMain previous="/gatsby-schema-extension-demo" next="/blog-post">
-        <h1 className="text-6xl text-center font-bold text-purple-800 my-12">
-          <span className="">And many more... 🎶</span>
-        </h1>
+        <GradientText className="my-12 filter drop-shadow-lg">
+          <h1 className="text-6xl text-center font-bold my-2">
+            And many more... <span className="text-gray-800">🎶</span>
+          </h1>
+        </GradientText>
         {renderPluginNames()}
       </SlideMain>
     </>

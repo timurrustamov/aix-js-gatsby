@@ -61,9 +61,11 @@ const Presentation: FunctionComponent = () => {
             src="../images/hackertim.png"
             placeholder="blurred"
           />
-          <h1 className="my-2 md:my-4 font-semibold text-4xl md:text-6xl text-center">
-            Hi, my name is <span className="text-purple-800">Timur!</span> 👋
-          </h1>
+          <div className="my-2 md:my-4">
+            <h1 className="text-gray-800 text-4xl md:text-6xl text-center">
+              Hi, my name is <span className="font-semibold text-purple-700">Timur</span> ! 👋
+            </h1>
+          </div>
           <h2 className="text-4xl md:text-6xl text-center">{renderEmojis()}</h2>
         </div>
       </SlideMain>

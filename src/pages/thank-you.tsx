@@ -11,7 +11,7 @@ const ThankYou: FunctionComponent = () => {
         description="Thank you so much for your attention, and please ask questions if something is not really clear ;)"
       />
 
-      <SlideMain previous="/gatsby-cloud">
+      <SlideMain previous="/gatsby-cloud-features">
         <h1 className="text-6xl text-center text-purple-800 font-semibold">Thank you so much ! ❤️</h1>
       </SlideMain>
     </>

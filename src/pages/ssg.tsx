@@ -1,6 +1,7 @@
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
 import { StaticImage } from 'gatsby-plugin-image';
 import React, { FunctionComponent, ReactElement, useState } from 'react';
+import GradientText from '../components/GradientText';
 import Seo from '../components/Seo';
 
 import SlideMain from '../components/SlideMain';
@@ -67,9 +68,12 @@ const SSG: FunctionComponent = () => {
       />
 
       <SlideMain previous="/intro" next="/how-gatsby-works">
-        <h1 className="text-6xl text-center font-bold my-12">
-          What is <span className="text-purple-800">Static site generation</span> ? 🤨
-        </h1>
+        <GradientText className="my-12 filter drop-shadow-lg">
+          <h1 className="text-6xl text-center font-bold my-2">
+            <span className="text-gray-800">What is</span> Static site generation
+            <span className="text-gray-800"> ? 🤨</span>
+          </h1>
+        </GradientText>
 
         <motion.div className="absolute bottom-0 left-0" initial={{ opacity: 0 }} whileHover={{ opacity: 1 }}>
           <StaticImage
